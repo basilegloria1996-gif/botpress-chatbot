@@ -1,4 +1,4 @@
 FROM botpress/server:latest
 EXPOSE 3000
 # NIENTE DB: usa lo storage locale (SQLite/file)
-CMD ["./bp"]
+CMD ["./bp", "start", "--port", "3000", "--host", "0.0.0.0"]
