@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: botpress-web
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /
+databases:
+  - name: bp-postgres
+    databaseName: botpress
+    user: botpress
