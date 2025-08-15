@@ -1,1 +1,15 @@
+services:
+  - type: web
+    name: botpress-chatbot
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BP_PRODUCTION
+        value: "true"
+      - key: BPFS_STORAGE
+        value: "disk"
+      - key: PORT
+        value: "3000"
 
