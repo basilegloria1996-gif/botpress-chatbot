@@ -1,7 +1,4 @@
 FROM botpress/server:latest
-
 EXPOSE 3000
-
-ENV BPFS_STORAGE=database
-
+# NIENTE DB: usa lo storage locale (SQLite/file)
 CMD ["./bp"]
